@@ -4,10 +4,15 @@ import ContactList from './components/contactList'
 import './App.css'
 
 function App() {
+  const [selectedContactId, setSelectedContactId] = useState(null);
 
   return (
     <>
-      <ContactList />
+      {selectedContactId ? (
+        <div>Contact selected:</div>
+      ) : (
+        <ContactList />
+        )}
     </>
   );
 }
